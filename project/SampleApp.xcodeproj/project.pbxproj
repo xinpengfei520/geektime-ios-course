@@ -26,7 +26,6 @@
 		B93116AD22798757007D7F2F /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B93116AC22798757007D7F2F /* icon.bundle */; };
 		B93AE89022D9AF95000F392F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93AE88F22D9AF95000F392F /* NotificationCenter.framework */; };
 		B93AE89422D9AF95000F392F /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B93AE89322D9AF95000F392F /* TodayViewController.m */; };
-		B93AE89B22D9AF95000F392F /* GTToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B93AE88E22D9AF95000F392F /* GTToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B93AE8A022D9B17E000F392F /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A0CADD22D79F0F0015E0B0 /* TencentOpenAPI.framework */; };
 		B969F4CE22D192AD00531930 /* libGTStaic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B969F4CB22D192AC00531930 /* libGTStaic.a */; };
 		B969F4EB22D1974600531930 /* GTFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B969F4E822D1970700531930 /* GTFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -42,30 +41,11 @@
 		B9C474F122BF4A7B00AD1F32 /* GTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C474F022BF4A7B00AD1F32 /* GTScreen.m */; };
 		B9C474F422BF616600AD1F32 /* GTSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C474F322BF616600AD1F32 /* GTSplashView.m */; };
 		B9C4751922BF781600AD1F32 /* GTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C4751822BF781600AD1F32 /* GTMediator.m */; };
+		F33AD915284E759A009D825C /* GTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B91B3A7A226C320F00F5C770 /* GTVideoViewController.m */; };
+		F3A0525E2857028500DB2E99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B92C57F022584DC60012A89B /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B93AE89922D9AF95000F392F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B92C57E422584DC60012A89B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B93AE88D22D9AF95000F392F;
-			remoteInfo = GTToday;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		B93AE89F22D9AF95000F392F /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				B93AE89B22D9AF95000F392F /* GTToday.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B969F4EC22D1974600531930 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,12 +364,10 @@
 				B92C57E922584DC60012A89B /* Frameworks */,
 				B92C57EA22584DC60012A89B /* Resources */,
 				B969F4EC22D1974600531930 /* Embed Frameworks */,
-				B93AE89F22D9AF95000F392F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B93AE89A22D9AF95000F392F /* PBXTargetDependency */,
 			);
 			name = SampleApp;
 			productName = SampleApp;
@@ -543,18 +521,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B93AE89422D9AF95000F392F /* TodayViewController.m in Sources */,
+				F33AD915284E759A009D825C /* GTVideoViewController.m in Sources */,
+				F3A0525E2857028500DB2E99 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B93AE89A22D9AF95000F392F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B93AE88D22D9AF95000F392F /* GTToday */;
-			targetProxy = B93AE89922D9AF95000F392F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B92C580022584DC70012A89B /* Debug */ = {
@@ -675,12 +647,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6B05DCA07C101AE992833DE4 /* Pods-SampleApp.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = SampleApp/SampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WD4T97CPG;
+				DEVELOPMENT_TEAM = XZWU3TZ389;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SampleApp/GTFramework",
@@ -695,10 +668,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SampleApp/GTFramework",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dequanzhu.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vance.xin.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -706,12 +680,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AD60557A5655F37069E0E2D1 /* Pods-SampleApp.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = SampleApp/SampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WD4T97CPG;
+				DEVELOPMENT_TEAM = XZWU3TZ389;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SampleApp/GTFramework",
@@ -726,20 +701,22 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SampleApp/GTFramework",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dequanzhu.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vance.xin.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
 		B93AE89C22D9AF95000F392F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = GTToday/GTToday.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WD4T97CPG;
+				DEVELOPMENT_TEAM = XZWU3TZ389;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SampleApp/GTFramework",
@@ -750,20 +727,22 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dequanzhu.sample.GTToday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vance.xin.sample.GTToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
 		B93AE89D22D9AF95000F392F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = GTToday/GTToday.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WD4T97CPG;
+				DEVELOPMENT_TEAM = XZWU3TZ389;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SampleApp/GTFramework",
@@ -774,10 +753,11 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dequanzhu.sample.GTToday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vance.xin.sample.GTToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};

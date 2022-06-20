@@ -28,7 +28,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    //[UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     UITabBarController *tabbarController = [[UITabBarController alloc] init];
     
     GTNewsViewController *newsViewController = [[GTNewsViewController alloc] init];    
@@ -59,12 +59,12 @@
     //[@[].mutableCopy addObject:nil];
     
     //定位和push
-    [[GTLocation locationManager] checkLocationAuthorization];
-    [[GTNotification notificationManager] checkNotificationAuthorization];
-    
-    //Extension 共享数据
-    NSUserDefaults *userDeault = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.dequanzhu.sample"];
-    [userDeault setObject:@"从0开发一款iOS App" forKey:@"title"];
+//    [[GTLocation locationManager] checkLocationAuthorization];
+//    [[GTNotification notificationManager] checkNotificationAuthorization];
+//
+//    //Extension 共享数据
+//    NSUserDefaults *userDeault = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.dequanzhu.sample"];
+//    [userDeault setObject:@"从0开发一款iOS App" forKey:@"title"];
     
     return YES;
 }
@@ -163,11 +163,11 @@ void HandleNSException(NSException *exception){
 
 - (void)_changeIcon{
     //动态更换图标
-    if ([UIApplication sharedApplication].supportsAlternateIcons) {
-        [[UIApplication sharedApplication] setAlternateIconName:@"ICONBLACK" completionHandler:^(NSError * _Nullable error) {
-            //回调
-        }];
-    }
+//    if ([UIApplication sharedApplication].supportsAlternateIcons) {
+//        [[UIApplication sharedApplication] setAlternateIconName:@"ICONBLACK" completionHandler:^(NSError * _Nullable error) {
+//            //回调
+//        }];
+//    }
 }
 
 

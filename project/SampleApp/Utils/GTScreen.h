@@ -30,8 +30,9 @@ static inline NSInteger UIAdapter (float x){
     //1 - 分机型 特定的比例
     
     //2 - 屏幕宽度按比例适配
-    CGFloat scale = 414 / SCREEN_WIDTH;
-    return (NSInteger)x /scale;
+//    CGFloat scale = 414 / SCREEN_WIDTH;
+//    return (NSInteger)x /scale;
+    return (NSInteger)x;
 }
 
 //...完善其他方法..size..rect..origin..
